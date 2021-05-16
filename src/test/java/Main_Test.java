@@ -7,8 +7,8 @@ public class Main_Test {
         //Tripple A (Act, Arrange, Assert)
         //Act zb Etwas initiallisieren, variable etc.
         //Arrange
-        String Actuall = Main.getString();
+        String Actuall = Main.GetMessage();
         //Assert
-        Assertions.assertEquals("Hallo",Actuall);
+        Assertions.assertEquals("hello rot13",Actuall);
     }
 }
