@@ -11,7 +11,7 @@ public class Controller {
     @GET
     @Path("/{sourceString}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getRot13StringFromSourceString(@PathParam("sourceString") String sourceString){
+    public static String getRot13StringFromSourceString(@PathParam("sourceString") String sourceString){
         StringBuffer returnValue = new StringBuffer(sourceString);
         for(int i = 0; i<returnValue.length();i++) {
             int c = returnValue.charAt(i);
@@ -27,7 +27,7 @@ public class Controller {
     @POST
     @Path("/change/{newDelta}")
     @Produces(MediaType.TEXT_PLAIN)
-    public int setDelta(@PathParam("newDelta") int i){
+    public static int setDelta(@PathParam("newDelta") int i){
         delta = i;
 
         return delta;
@@ -41,7 +41,7 @@ public class Controller {
     }
 
 
-    private int remove26IfHigher(int c) {
+    public static int remove26IfHigher(int c) {
         if(c > 26) {
             c = c - 26;
         }
